@@ -25,13 +25,13 @@
     packages = forAllSystems (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      trino = pkgs.callPackage ./pkgs/trino.nix {};
+      trino = pkgs.callPackage ./pkgs/trino {};
     });
 
     nixosModules = forAllSystems (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      trino = import ./modules/trino.nix {pkgs = pkgs // self.packages;};
+      trino = import ./modules/trino {pkgs = pkgs // self.packages;};
     });
 
     # Generic development shells
