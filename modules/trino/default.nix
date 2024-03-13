@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  cfg = config.looniversity.service.trino;
+  cfg = config.nixie.services.trino;
 
   node_config = ''
     node.environment=production
@@ -64,7 +64,7 @@
 
   inherit (lib) mkEnableOption mkIf mkOption types;
 in {
-  options.looniversity.service.trino = {
+  options.nixie.services.trino = {
     enable = mkEnableOption "trino";
 
     port = mkOption {
