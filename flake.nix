@@ -1,4 +1,6 @@
 {
+  description = "A flake to develop nix packages and modules";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
