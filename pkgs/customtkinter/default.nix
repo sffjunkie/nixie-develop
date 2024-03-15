@@ -2,7 +2,6 @@
   lib,
   fetchFromGitHub,
   python3,
-  setuptools,
   ...
 }:
 python3.pkgs.buildPythonPackage rec {
