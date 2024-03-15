@@ -2,6 +2,7 @@
   lib,
   fetchFromGitHub,
   python3,
+  setuptools,
 }:
 python3.pkgs.buildPythonPackage rec {
   pname = "customtkinter";
@@ -13,6 +14,10 @@ python3.pkgs.buildPythonPackage rec {
     rev = "v${version}";
     sha256 = "sha256-1g2wdXbUv5xNnpflFLXvU39s16kmwvuegKWd91E3qm4=";
   };
+
+  nativeBuildInputs = with python3.pkgs; [
+    setuptools
+  ];
 
   propagatedBuildInputs = with python3.pkgs; [
     darkdetect
