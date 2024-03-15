@@ -25,6 +25,7 @@
     packages = forAllSystems (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
+      customtkinter = pkgs.callPackage ./pkgs/customtkinter {};
       trino = pkgs.callPackage ./pkgs/trino {};
     });
 
