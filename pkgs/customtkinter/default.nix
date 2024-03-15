@@ -7,6 +7,7 @@
 python3.pkgs.buildPythonPackage rec {
   pname = "customtkinter";
   version = "5.2.2";
+  format = "pyproject";
 
   src = fetchFromGitHub {
     owner = "TomSchimansky";
