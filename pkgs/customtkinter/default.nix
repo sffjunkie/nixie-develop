@@ -11,7 +11,7 @@ python3.pkgs.buildPythonPackage rec {
     owner = "TomSchimansky";
     repo = "CustomTkinter";
     rev = "v${version}";
-    sha256 = lib.fakeSha256;
+    sha256 = "sha256-1g2wdXbUv5xNnpflFLXvU39s16kmwvuegKWd91E3qm4=";
   };
 
   propagatedBuildInputs = with python3.pkgs; [
